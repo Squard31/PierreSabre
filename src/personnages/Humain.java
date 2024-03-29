@@ -4,7 +4,7 @@ public class Humain
 {
 	private String nom;
 	private String boisson;
-	private int argent;
+	protected int argent;
 	
 	// CONSTRUCTEUR
 	
@@ -81,7 +81,7 @@ public class Humain
 		
 		// METHODE "perdreArgent"
 		
-		public void perdreArgent(int perte)
+		protected void perdreArgent(int perte)
 		{
 			argent = argent - perte;
 		}
