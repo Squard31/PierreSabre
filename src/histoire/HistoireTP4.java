@@ -1,24 +1,19 @@
 package histoire;
 
 import personnages.Humain;
+import personnages.Commercant;
 
 public class HistoireTP4 {
 
 	public static void main(String[] args) 
 	{
-		Humain Nikita = new Humain("Nikita", "Mojito", 54);
-		Nikita.direBonjour();
+		Commercant marco = new Commercant ("Marco", "the", 100);
+		marco.direBonjour();
 		
-		Nikita.acheter("Mojito", 12);
-		Nikita.perdreArgent(12);
+		marco.seFaireExtorquer(15);
+		marco.recevoir(15);
 		
-		Nikita.boire();
-		
-		Nikita.acheter("jeu",2);
-		Nikita.perdreArgent(2);
-		
-		Nikita.acheter("kimono", 50);
-		
+		marco.boire();
 	}
 
 }

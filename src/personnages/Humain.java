@@ -34,7 +34,7 @@ public class Humain
 	
 	// METHODE "parler"
 	
-	public String parler()
+	protected String parler()
 	{
 		return("L'Humain " + nom + " : ");
 	}
@@ -52,7 +52,7 @@ public class Humain
 		
 		public void boire()
 		{
-			System.out.println(parler() + " Mmmm, un bon verre de " + boisson + " ! " + " GLOUPS ! ");
+			System.out.println(parler() + " Mmmm, un bon verre de " + boisson + "! " + "GLOUPS ! ");
 		}
 		
 		
@@ -62,18 +62,18 @@ public class Humain
 		{
 			if (prix > getArgent()) 
 			{
-				System.out.println(parler() + " Je n'ai plus que " + getArgent() + " sous en poche. Je ne peux même pas offrir un " + bien + " à " + prix + " sous ");
+				System.out.println(parler() + " Je n'ai plus que " + getArgent() + " sous en poche. Je ne peux mï¿½me pas offrir un " + bien + " ï¿½ " + prix + " sous ");
 			}
 			else
 			{
-				System.out.println(" J'ai " + getArgent() + " sous en poche. Je vais pouvoir m'offrir " + bien + " à " + prix + " sous ");
+				System.out.println(" J'ai " + getArgent() + " sous en poche. Je vais pouvoir m'offrir " + bien + " ï¿½ " + prix + " sous ");
 			}
 		}
 		
 		
 		// METHODE "gagnerArgent"
 		
-		public void gagnerArgent(int gain)
+		protected void gagnerArgent(int gain)
 		{
 			argent = argent + gain;
 		}
