@@ -73,7 +73,7 @@ public class Humain
 		
 		// METHODE "gagnerArgent"
 		
-		protected void gagnerArgent(int gain)
+		public void gagnerArgent(int gain)
 		{
 			argent = argent + gain;
 		}

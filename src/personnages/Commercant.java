@@ -16,7 +16,7 @@ public class Commercant extends Humain
 	{
 		perdreArgent(vol);
 		System.out.println("J'ai tout perdu ! Le monde est vraiment trop injuste");
-		return getArgent();
+		return vol;
 	}
 	
 	
