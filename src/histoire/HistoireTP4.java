@@ -11,14 +11,14 @@ public class HistoireTP4 {
 	{
 		Humain eliott = new Humain ("Eliott", "coca", 100);
 		Commercant marco = new Commercant ("Marco", "the", 100);
-		Yakuza yaku  = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong", 0);
-		Ronin roro = new Ronin("Roro", "shochu", 50, 1);
+		Yakuza yaku  = new Yakuza("Yaku Le Noir", "whisky", 45, "Warsong", 4);
+		Ronin roro = new Ronin("Roro", "shochu", 54, 1);
 		
-		roro.direBonjour();
+		roro.provoquer(yaku);
+		yaku.gagner(roro.getArgent());
+		roro.perdreArgent(roro.getArgent());
+		yaku.gagnerArgent(roro.getArgent());
 		
-		roro.donner(marco); System.out.println(" 6 sous");
-		roro.perdreArgent(6);
-		System.out.println(marco.parler() + " 6 sous ! Je te remercie généreux donateur! ");
 	}
 
 }
