@@ -12,7 +12,7 @@ public class Yakuza extends Humain
 	{
 		super(nom, boisson, argent = 30);
 		this.clan = clan;
-		this.reput = reput;
+		this.reput = reput = 0;
 	}
 	
 	

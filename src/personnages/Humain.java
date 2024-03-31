@@ -34,7 +34,7 @@ public class Humain
 	
 	// METHODE "parler"
 	
-	protected String parler()
+	public String parler()
 	{
 		return("L'Humain " + nom + " : ");
 	}
@@ -81,7 +81,7 @@ public class Humain
 		
 		// METHODE "perdreArgent"
 		
-		protected void perdreArgent(int perte)
+		public void perdreArgent(int perte)
 		{
 			argent = argent - perte;
 		}
