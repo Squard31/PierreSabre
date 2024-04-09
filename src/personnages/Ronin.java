@@ -4,14 +4,13 @@ import personnages.Yakuza;
 
 public class Ronin extends Humain
 {
-	private int honneur;
+	private int honneur = 1;
 	
 	// CONSTRUCTEUR POUR LA CLASSE RONIN
 	
 	public Ronin (String nom, String boisson, int argent, int honneur)
 	{
 		super(nom, boisson, argent);
-		this.honneur = honneur = 1;
 	}
 	
 	

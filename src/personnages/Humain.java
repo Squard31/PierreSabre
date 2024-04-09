@@ -5,6 +5,8 @@ public class Humain
 	private String nom;
 	private String boisson;
 	protected int argent;
+	private Humain[] Connaissance = new Humain[30];
+	private int nbConnaissance = 0;
 	
 	// CONSTRUCTEUR
 	
@@ -85,4 +87,61 @@ public class Humain
 		{
 			argent = argent - perte;
 		}
+		
+		
+		// METHODE "faireConnaissance"
+		
+		public void faireConnaissanceAvec(Humain humain)
+		{
+			direBonjour();
+			repondre(humain);
+			memoriser(humain);
+			memoriser(this);
+			
+		}
+		
+		
+		// METHODE "repondre"
+		
+		public void repondre(Humain humain)
+		{
+			humain.direBonjour();
+		}
+		
+		
+		// METHODE "memoriser"
+		
+		public void memoriser(Humain humain)
+		{
+			if (nbConnaissance >= Connaissance.length)
+			{
+				for (int j = 1 ; j < Connaissance.length ; j++)
+				{
+					Connaissance[j-1] = Connaissance[j]; 
+				}
+				Connaissance[Connaissance.length -1] = humain;
+			}
+			else
+			{
+				Connaissance[nbConnaissance] = humain;
+				nbConnaissance = nbConnaissance + 1;
+			}
+		}
+		
+		
+		// METHODE "afficherConnaissance"
+		
+		public void listeConnaissance()
+		{
+			for (int i = 0 ; i < Connaissance.length ; i++)
+			{
+				if (Connaissance[i] == null)
+				{
+					break;
+				}
+				System.out.print(Connaissance[i].nom + " ");
+			}
+			System.out.println();
+		}
+		
 }

@@ -5,7 +5,7 @@ import personnages.Ronin;
 public class Yakuza extends Humain
 {
 	private String clan;
-	private int reput;
+	private int reput = 4;
 
 
 	// CONSTRUCTEUR POUR LES YAKUZAS
@@ -14,7 +14,6 @@ public class Yakuza extends Humain
 	{
 		super(nom, boisson, argent);
 		this.clan = clan;
-		this.reput = reput = 4;
 	}
 	
 	
